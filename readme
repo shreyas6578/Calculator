@@ -1,0 +1,32 @@
+# Calculator App
+
+Welcome to the Calculator App! This simple Android application performs basic arithmetic operations, displays calculation history, and provides a user-friendly interface.
+
+## Features
+
+- **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
+- **Square Root Calculation**: Easily compute square roots.
+- **Parentheses Support**: Include parentheses to manage operation precedence.
+- **Decimal Points**: Support for decimal numbers.
+- **History Tracking**: View previous calculations in the history screen.
+- **Edge-to-Edge Display**: Optimized for modern Android devices with edge-to-edge displays.
+
+## Screenshots
+
+![Calculator](screenshots/calculator.png)
+![History](screenshots/history.png)
+
+## Getting Started
+
+### Prerequisites
+
+- Android Studio
+- Basic knowledge of Android development
+- Java SDK
+
+### Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/shreyas6578/Calculator.git
