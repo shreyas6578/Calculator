@@ -2,4 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <!-- colors.xml -->
+    <color name="buttonBackgroundDark">#333333</color> <!-- Dark Gray -->
+    <color name="textColorWhite">#FFFFFF</color> <!-- White -->
+    <color name="highlightGreen">#4CAF50</color> <!-- Green -->
+<color name="button">#1E1E1E</color>
 </resources>

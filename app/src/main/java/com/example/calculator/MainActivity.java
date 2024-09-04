@@ -1,6 +1,7 @@
 package com.example.calculator;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -13,12 +14,16 @@ import androidx.core.view.WindowInsetsCompat;
 
 import org.mozilla.javascript.Context;
 import org.mozilla.javascript.Scriptable;
+
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
+    // Buttons for digits and operations
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9, btn0;
-    Button clear, cross, add, sub, multiply, divide, square_root, bracket, ans, dot;
+    Button clear, cross, add, sub, multiply, divide, square_root, bracket, ans, dot,history,answer ;
     boolean check;
     String expression;
-
+  ArrayList<String> list = new ArrayList<>();
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +35,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Initialize display and output text views
         TextView display = findViewById(R.id.display);
         TextView output = findViewById(R.id.textView3);
         final String[] text = {display.getText().toString()};
+        // Initialize buttons
+        history=findViewById(R.id.history);
         btn1 = findViewById(R.id.one_1);
         btn2 = findViewById(R.id.Two_2);
         btn3 = findViewById(R.id.three_3);
@@ -53,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
         bracket = findViewById(R.id.bracket);
         ans = findViewById(R.id.ans);
         dot = findViewById(R.id.dot);
-        //
+
+        // Set up button click listeners
+
         add.setOnClickListener(clickedView -> {
             expression = display.getText().toString();
             if (expression.contains("=")) {
@@ -167,19 +177,32 @@ public class MainActivity extends AppCompatActivity {
             display.setText(display.getText() + "9");
         });
         //number button
+
         ans.setOnClickListener(clickedView -> {
             String expression = display.getText().toString();
             expression = expression.replace("=", "");
             if (!expression.isEmpty()) {
                 try {
-                    double result = evaluateExpression(expression);
+                double  result = evaluateExpression(expression);
                     display.setText(expression + "=" + String.valueOf(result));
                     output.setText(String.valueOf(result));
+                  list.add(expression +"="+ String.valueOf(result));
                 } catch (Exception e) {
                     display.setText("Error");
                 }
             }
+
+
         });
+
+
+
+        history.setOnClickListener(clickedView -> {
+            Intent intent = new Intent(MainActivity.this, history.class); // Ensure HistoryActivity is the correct name
+            intent.putStringArrayListExtra("EXPRESSION_HISTORY", list); // Passing the list
+            startActivity(intent);
+        });
+
     }
     private double evaluateExpression(String expression) {
         expression = expression.replace("=", "");
@@ -201,3 +224,4 @@ public class MainActivity extends AppCompatActivity {
         return result;
     }
 }
+

@@ -4,7 +4,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#282828"
+    android:background="#000000"
     android:orientation="vertical"
     android:layout_marginTop="35dp"
     tools:context=".MainActivity">
@@ -16,7 +16,7 @@
         android:background="@android:color/darker_gray"
         android:gravity="end"
         android:text=""
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:textSize="36sp"
         android:textColor="#000000" />
 
@@ -30,11 +30,25 @@
         android:textColor="#000000"
         android:textSize="36sp" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="109dp"
+    <GridLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="History" />
+        android:layout_marginTop="2dp"
+        android:verticalScrollbarPosition="right"
+        android:visibility="visible">
+
+        <Button
+            android:id="@+id/history"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:backgroundTint="#1E1E1E"
+            android:text="history"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+
+    </GridLayout>
 
     <TableRow
         android:layout_width="match_parent"
@@ -47,7 +61,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#FF8D00"
+            android:backgroundTint="#FF3B30"
             android:text="@string/ac"
             android:textColor="#FFFFFF"
             android:textColorLink="@color/white"
@@ -59,7 +73,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#457B9D"
+            android:backgroundTint="#1E1E1E"
             android:text="%"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -71,7 +85,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="#1E1E1E"
             android:text="*"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -83,6 +97,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
+            android:backgroundTint="#1E1E1E"
             android:text="⌫"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -99,7 +114,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="#1E1E1E"
             android:text="7"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -111,7 +126,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="#1E1E1E"
             android:text="8"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -123,7 +138,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="#1E1E1E"
             android:text="9"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -135,6 +150,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
+            android:backgroundTint="@color/button"
             android:text="-"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -150,7 +166,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="4"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -162,7 +178,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="5"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -174,7 +190,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="6"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -186,6 +202,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
+            android:backgroundTint="@color/button"
             android:text="+"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -201,7 +218,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="1"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -213,7 +230,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="2"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -225,7 +242,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="3"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -237,6 +254,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
+            android:backgroundTint="@color/button"
             android:text="√"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -252,7 +270,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="( )"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -264,7 +282,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="0"
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -276,7 +294,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:backgroundTint="#424040"
+            android:backgroundTint="@color/button"
             android:text="."
             android:textColor="@color/white"
             android:textColorLink="@color/white"
@@ -288,13 +306,11 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
+            android:backgroundTint="#00C851"
             android:text="="
             android:textColor="@color/white"
             android:textColorLink="@color/white"
             android:textSize="60sp" />
     </TableRow>
-
-
-
 
 </LinearLayout>
