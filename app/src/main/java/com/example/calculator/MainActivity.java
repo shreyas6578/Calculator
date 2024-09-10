@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     boolean check;
     String expression;
   ArrayList<String> list = new ArrayList<>();
+    DataHelper dataHelper;
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -187,6 +189,18 @@ public class MainActivity extends AppCompatActivity {
                     display.setText(expression + "=" + String.valueOf(result));
                     output.setText(String.valueOf(result));
                   list.add(expression +"="+ String.valueOf(result));
+//change
+                    dataHelper = DataHelper.getInstance(this);
+                    Memo history = new Memo(expression +"="+ String.valueOf(result));
+                    new Thread(() -> {
+                        dataHelper.noteDao().insert(history);
+                        runOnUiThread(() -> {
+                            Toast.makeText(MainActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
+                        //    loadNotes();  // Refresh the RecyclerView
+  //change
+                        });
+                    }).start();
+
                 } catch (Exception e) {
                     display.setText("Error");
                 }
@@ -194,8 +208,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
-
-
 
         history.setOnClickListener(clickedView -> {
             Intent intent = new Intent(MainActivity.this, history.class); // Ensure HistoryActivity is the correct name
