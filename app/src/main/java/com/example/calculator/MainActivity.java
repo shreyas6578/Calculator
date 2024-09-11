@@ -195,7 +195,7 @@ public class MainActivity extends AppCompatActivity {
                     new Thread(() -> {
                         dataHelper.noteDao().insert(history);
                         runOnUiThread(() -> {
-                            Toast.makeText(MainActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
+                        //    Toast.makeText(MainActivity.this, "Note saved", Toast.LENGTH_SHORT).show();
                         //    loadNotes();  // Refresh the RecyclerView
   //change
                         });
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
 
         history.setOnClickListener(clickedView -> {
             Intent intent = new Intent(MainActivity.this, history.class); // Ensure HistoryActivity is the correct name
-            intent.putStringArrayListExtra("EXPRESSION_HISTORY", list); // Passing the list
+          //  intent.putStringArrayListExtra("EXPRESSION_HISTORY", list); // Passing the list
             startActivity(intent);
         });
 

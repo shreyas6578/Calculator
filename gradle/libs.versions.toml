@@ -10,6 +10,7 @@ constraintlayout = "2.1.4"
 rhinoAndroid = "1.2.0"
 gridlayout = "1.0.0"
 legacySupportV4 = "1.0.0"
+roomRuntime = "2.6.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -22,6 +23,7 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 rhino-android = { module = "io.apisense:rhino-android", version.ref = "rhinoAndroid" }
 gridlayout = { group = "androidx.gridlayout", name = "gridlayout", version.ref = "gridlayout" }
 legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacySupportV4" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomRuntime" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

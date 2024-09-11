@@ -11,11 +11,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class history extends AppCompatActivity {
 DataHelper dataHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +26,7 @@ DataHelper dataHelper;
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        TextView textView = findViewById(R.id.textview);
+      TextView textView = findViewById(R.id.textview);
         Button back = findViewById(R.id.back);
         Button clear = findViewById(R.id.clear);
 
@@ -57,8 +57,11 @@ DataHelper dataHelper;
             for (Memo memo : notes) {
                 notesString.append(memo.getNotes()).append("\n");
             }
+            runOnUiThread(() -> {
 
-            // Set the concatenated notes to the TextView
+                textView.setText(notesString.toString());
+            });
+
             textView.setText(notesString.toString());
         }).start();
         back.setOnClickListener(clickedView -> {
@@ -67,7 +70,11 @@ DataHelper dataHelper;
         });
         clear.setOnClickListener(view ->
         {
-
+           textView.setText("");
+            new Thread(()->{
+            dataHelper.noteDao().resetAutoIncrement();
+            dataHelper.noteDao().deleteAll();
+        }).start();
         });
 
     }

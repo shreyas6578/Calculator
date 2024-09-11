@@ -16,9 +16,13 @@ public interface dao {
 
      @Delete
     void  delete(Memo history);
-    @Query("SELECT * FROM history ORDER BY id ASC")
+
+    @Query("SELECT * FROM (SELECT * FROM history ORDER BY id DESC LIMIT 10) subquery ORDER BY id ASC")
     List<Memo> getAllNotes();
 
     @Query("DELETE FROM sqlite_sequence WHERE name = 'history'")
     void resetAutoIncrement();
+
+    @Query("DELETE FROM history")
+    void deleteAll();
 }

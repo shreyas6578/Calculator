@@ -9,17 +9,18 @@
     android:layout_marginTop="35dp"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textview"
-        android:layout_width="380dp"
-        android:layout_height="546dp"
-        android:text=""
-        android:textColor="@color/white"
-        android:textAlignment="textStart"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="380dp"
+            android:layout_height="546dp"
+            android:text=""
+            android:textColor="@color/white"
+            android:textAlignment="textStart"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="36sp" />
 
     <androidx.gridlayout.widget.GridLayout
         android:layout_width="385dp"
@@ -30,10 +31,10 @@
             android:layout_width="109dp"
             android:layout_height="81dp"
             android:layout_marginLeft="5dp"
-            android:text="back"
-            android:textSize="25dp"
-            android:textColor="@color/white"
             android:backgroundTint="@color/button"
+            android:text="back"
+            android:textColor="@color/white"
+            android:textSize="25dp"
             app:layout_column="0"
             app:layout_row="0" />
 
@@ -41,13 +42,15 @@
             android:id="@+id/clear"
             android:layout_width="109dp"
             android:layout_height="81dp"
-            android:textSize="25dp"
             android:layout_marginRight="5dp"
+            android:backgroundTint="@color/button"
             android:text="clear"
             android:textColor="@color/white"
-            android:backgroundTint="@color/button"
+            android:textSize="25dp"
             app:layout_column="4"
             app:layout_row="0" />
+
+
     </androidx.gridlayout.widget.GridLayout>
 
 </LinearLayout>
