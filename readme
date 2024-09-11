@@ -1,17 +1,19 @@
+
 # Calculator App
 
-Welcome to the Calculator App! This simple Android application performs basic arithmetic operations, displays calculation history, and provides a user-friendly interface.
+Welcome to the Calculator App! This Android application performs basic arithmetic operations, stores calculation history using the Room Database, and uses the Rhino library to evaluate mathematical expressions.
 
-Features
-Basic Arithmetic Operations: Addition, subtraction, multiplication, and division.
-Square Root Calculation: Easily compute square roots.
-Parentheses Support: Handle complex expressions with parentheses for proper operation precedence.
-Decimal Points: Support for decimal number calculations.
-Calculation History: Keep track of previous calculations, which can be viewed in a separate history screen.
-Clear History: Easily clear the calculation history with a single button press.
-Edge-to-Edge Display: Optimized for modern Android devices with edge-to-edge screens.
-Room Database: Store and retrieve calculation history using Room, Android's ORM (Object-Relational Mapping) tool.
-Rhino Library: Leverage Rhino to evaluate complex mathematical expressions.
+## Features
+
+- **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
+- **Square Root Calculation**: Easily compute square roots.
+- **Parentheses Support**: Handle complex expressions with parentheses for proper operation precedence.
+- **Decimal Points**: Support for decimal number calculations.
+- **Calculation History**: Keep track of previous calculations, viewable in a separate history screen.
+- **Clear History**: Easily clear the calculation history with a single button press.
+- **Edge-to-Edge Display**: Optimized for modern Android devices with edge-to-edge screens.
+- **Room Database**: Store and retrieve calculation history using Room, Android's ORM (Object-Relational Mapping) tool.
+- **Rhino Library**: Leverage Rhino to evaluate complex mathematical expressions.
 
 ## Screenshots
 
@@ -23,12 +25,24 @@ Rhino Library: Leverage Rhino to evaluate complex mathematical expressions.
 ### Prerequisites
 
 - Android Studio
-- Basic knowledge of Android development
 - Java SDK
+- Basic knowledge of Android development
 
 ### Installation
 
-1. **Clone the Repository**:
+1. **Clone the Repository:**
 
    ```bash
    git clone https://github.com/shreyas6578/Calculator.git
+   ```
+
+2. **Open the Project in Android Studio:**
+
+   - Open Android Studio.
+   - Navigate to `File -> Open`, then find and select the cloned repository.
+
+3. **Build the App:**
+
+   - Ensure that your Android Studio is set up with the appropriate Android SDK.
+   - Click on the Run button to build and deploy the app to your Android device or emulator.
+
