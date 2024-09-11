@@ -2,14 +2,16 @@
 
 Welcome to the Calculator App! This simple Android application performs basic arithmetic operations, displays calculation history, and provides a user-friendly interface.
 
-## Features
-
-- **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division.
-- **Square Root Calculation**: Easily compute square roots.
-- **Parentheses Support**: Include parentheses to manage operation precedence.
-- **Decimal Points**: Support for decimal numbers.
-- **History Tracking**: View previous calculations in the history screen.
-- **Edge-to-Edge Display**: Optimized for modern Android devices with edge-to-edge displays.
+Features
+Basic Arithmetic Operations: Addition, subtraction, multiplication, and division.
+Square Root Calculation: Easily compute square roots.
+Parentheses Support: Handle complex expressions with parentheses for proper operation precedence.
+Decimal Points: Support for decimal number calculations.
+Calculation History: Keep track of previous calculations, which can be viewed in a separate history screen.
+Clear History: Easily clear the calculation history with a single button press.
+Edge-to-Edge Display: Optimized for modern Android devices with edge-to-edge screens.
+Room Database: Store and retrieve calculation history using Room, Android's ORM (Object-Relational Mapping) tool.
+Rhino Library: Leverage Rhino to evaluate complex mathematical expressions.
 
 ## Screenshots
 
